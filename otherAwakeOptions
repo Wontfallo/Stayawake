@@ -1,0 +1,28 @@
+REM Replace "C:\path\to\pythonw.exe" with the path to your Python installation's pythonw.exe, and replace "C:\path\to\your_script.py" with the path to your Python script.
+
+REM Please note that this will run your script in the background, and you won't be able to see any output from the script. If you need to see any output, you might want to consider using a logging library in your Python script to write output to a file.'''
+
+@echo off
+start /min "" "C:\path\to\pythonw.exe" "C:\path\to\your_script.py"
+
+
+--------------------------
+
+REM Yes, you can specify the size and location of a command prompt window when it opens by using the mode and start commands in a batch file.
+
+REM Here's an example of how you can do it:
+
+@echo off
+mode con: cols=50 lines=5
+start /min cmd /c "your_script.py"
+
+
+REM In this example, mode con: cols=50 lines=5 sets the width of the window to 50 columns and the height to 5 lines. The start /min command starts the command prompt window minimized. The /c option tells the command prompt to close itself after running the specified command.
+
+-----------------------
+
+REM If you want to start the window in a specific location, you can use the start command with the /x and /y options. The /x option sets the horizontal position of the window, and the /y option sets the vertical position. For example:'''
+
+
+@echo off
+start /min /x 1000 /y 1000 cmd /c "your_script.py"

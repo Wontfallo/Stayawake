@@ -1,0 +1,1 @@
+python awake_smallmove.py
